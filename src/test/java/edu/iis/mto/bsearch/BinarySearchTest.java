@@ -35,7 +35,7 @@ public class BinarySearchTest {
     @Test
     public void binarySearchShouldReturnThatElementIsNotFoundInSequenceOf1() {
         searchResult = BinarySearch.search(wantedElement, seqTest2);
-        assertFalse(searchResult.isFound());
+        assertThat(searchResult.isFound(), Matchers.is(false));
     }
 
     @Test
