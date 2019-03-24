@@ -47,13 +47,13 @@ public class BinarySearchTest {
     @Test
     public void binarySearchShouldReturnWantedElementAsLastElementInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest4);
-        assertEquals(seqTest4.length - 1, searchResult.getPosition());
+        assertThat(searchResult.getPosition(), Matchers.is(seqTest4.length - 1));
     }
 
     @Test
     public void binarySearchShouldReturnWantedElementAsMiddleElementInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest5);
-        assertEquals(seqTest5.length/2, searchResult.getPosition());
+        assertEquals(seqTest5.length / 2, searchResult.getPosition());
     }
 
     @Test
