@@ -48,7 +48,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void binarySearchShouldReturnWantedElementAsMiddleElementInSequenceOfLengthGraterThan1() {
+    public void binarySearchShouldReturnWantedElementAsMiddleElementInSequenceOfLengthGraterThan1AndLengthIsOddNumber() {
         searchResult = BinarySearch.search(WANTED_ELEMENT, SEQ_TEST5);
         assertThat(searchResult.getPosition(), Matchers.is(SEQ_TEST5.length / 2));
     }
@@ -60,7 +60,7 @@ public class BinarySearchTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void binarySearchShouldThrowIllegalArgumentExceptionIfSequenceIsEmpty () {
+    public void binarySearchShouldThrowIllegalArgumentExceptionIfSequenceIsEmpty() {
         searchResult = BinarySearch.search(WANTED_ELEMENT, new int[0]);
     }
 
