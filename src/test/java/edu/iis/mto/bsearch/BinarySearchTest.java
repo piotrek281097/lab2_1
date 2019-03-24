@@ -41,7 +41,7 @@ public class BinarySearchTest {
     @Test
     public void binarySearchShouldReturnWantedElementAsFirstElementInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest3);
-        assertEquals(0, searchResult.getPosition());
+        assertThat(searchResult.getPosition(), Matchers.is(0));
     }
 
     @Test
