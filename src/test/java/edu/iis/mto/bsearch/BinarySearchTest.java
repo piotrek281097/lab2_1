@@ -13,6 +13,7 @@ public class BinarySearchTest {
 
     private static final int wantedElement = 8;
     private static final int[] seqTest1 = {8};
+    private static final int[] seqTest2 = {1};
 
     private SearchResult searchResult;
 
@@ -25,6 +26,12 @@ public class BinarySearchTest {
     public void binarySearchShouldReturnThatElementIsFoundInSequenceOf1() {
         searchResult = BinarySearch.search(wantedElement, seqTest1);
         assertTrue(searchResult.isFound());
+    }
+
+    @Test
+    public void binarySearchShouldReturnThatElementIsNotFoundInSequenceOf1() {
+        searchResult = BinarySearch.search(wantedElement, seqTest2);
+        assertFalse(searchResult.isFound());
     }
 
 
