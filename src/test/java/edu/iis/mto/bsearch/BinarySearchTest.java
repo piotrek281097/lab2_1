@@ -53,7 +53,7 @@ public class BinarySearchTest {
     @Test
     public void binarySearchShouldReturnWantedElementAsMiddleElementInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest5);
-        assertEquals(seqTest5.length / 2, searchResult.getPosition());
+        assertThat(searchResult.getPosition(), Matchers.is(seqTest5.length / 2));
     }
 
     @Test
