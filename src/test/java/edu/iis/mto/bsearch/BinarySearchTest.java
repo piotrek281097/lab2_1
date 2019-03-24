@@ -17,6 +17,7 @@ public class BinarySearchTest {
     private static final int[] seqTest3 = {8,9,10,15,20};
     private static final int[] seqTest4 = {1,3,5,6,7,8};
     private static final int[] seqTest5 = {6,7,8,9,10};
+    private static final int[] seqTest6 = {1,2,3,4,5};
 
     private SearchResult searchResult;
 
@@ -53,6 +54,12 @@ public class BinarySearchTest {
     public void binarySearchShouldReturnWantedElementAsMiddleElementInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest5);
         assertEquals(seqTest5.length/2, searchResult.getPosition());
+    }
+
+    @Test
+    public void binarySearchShouldReturnThatElementIsNotFoundInSequenceOfLengthGraterThan1() {
+        searchResult = BinarySearch.search(wantedElement, seqTest6);
+        assertFalse(searchResult.isFound());
     }
 
 
