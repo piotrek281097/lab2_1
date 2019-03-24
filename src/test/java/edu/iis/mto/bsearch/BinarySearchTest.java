@@ -59,7 +59,7 @@ public class BinarySearchTest {
     @Test
     public void binarySearchShouldReturnThatElementIsNotFoundInSequenceOfLengthGraterThan1() {
         searchResult = BinarySearch.search(wantedElement, seqTest6);
-        assertFalse(searchResult.isFound());
+        assertThat(searchResult.isFound(), Matchers.is(false));
     }
 
 
